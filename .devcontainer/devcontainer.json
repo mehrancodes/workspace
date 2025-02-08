@@ -19,8 +19,8 @@
         "phpcs.executablePath": "./src/vendor/bin/phpcs",
         "phpmd.command": "./src/vendor/bin/phpmd",
         "phpmd.rules": "./src/phpmd.xml",
-        // テスト実行時にターミナルに吐かれるlocalhost:3000を検知して3000が自動でフォワードされるのを防ぐ
-        // php artisan serve は8000で起動するがそのポートフォワードはcomposeファイルで設定しているためautoは不要
+        // Prevent automatic forwarding of port 3000 by detecting "localhost:3000" output in the terminal during test execution.
+        // php artisan serve runs on port 8000, but since the port forwarding is configured in the compose file, auto-forwarding is unnecessary.
         "remote.autoForwardPorts": false
       }
     }
